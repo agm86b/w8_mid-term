@@ -30,30 +30,64 @@
 
 <div class="grid-container">
   
-  <div class="item2"><img src="https://github.com/agm86b/w8_mid-term/blob/master/image/001.png?raw=true" alt="Smiley face" height="250" width="250"></div>
+  <div class="item2" id="BG">
   
-  <div class="item3"><img src="https://github.com/agm86b/w8_mid-term/blob/master/image/003.png?raw=true" alt="Smiley face" height="250" width="250"></div>
+  <img src="https://github.com/agm86b/w8_mid-term/blob/master/image/001.png?raw=true" alt="Smiley face" height="250" width="250">
+  <center><button type="button" onclick="changeBGred()">Gotcha!</button></center>
+  
+  </div>
+  
+  <div class="item3" id="BL">
+  <img src="https://github.com/agm86b/w8_mid-term/blob/master/image/003.png?raw=true" alt="Smiley face" height="250" width="250">
+  
+  <center><button type="button" onclick="changeBGblue()">Gotcha!</button></center>
+  
+  </div>
 
-  <div class="item4 big"><img src="https://github.com/agm86b/w8_mid-term/blob/master/image/005.png?raw=true" alt="Smiley face" height="250" width="250"></div>
+  <div class="item4" id="BG" >
   
-  <div class="item5"><img src="https://github.com/agm86b/w8_mid-term/blob/master/image/004.png?raw=true" alt="Smiley face" height="250" width="250"></div>
+  <img src="https://github.com/agm86b/w8_mid-term/blob/master/image/005.png?raw=true" alt="Smiley face" height="250" width="250">
+  
+  <center><button type="button" onclick="changeBGred()">Gotcha!</button></center>
+  
+  </div>
+  
+  <div class="item5" id="BL"><img src="https://github.com/agm86b/w8_mid-term/blob/master/image/004.png?raw=true" alt="Smiley face" height="250" width="250"></div>
      
-  <div class="item6"><img src="https://github.com/agm86b/w8_mid-term/blob/master/image/002.png?raw=true" alt="Smiley face" height="250" width="250"></div>
+  <div class="item6" id="BG"><img src="https://github.com/agm86b/w8_mid-term/blob/master/image/002.png?raw=true" alt="Smiley face" height="250" width="250">
   
-  <div class="item7"><img src="https://github.com/agm86b/w8_mid-term/blob/master/image/006.png?raw=true" alt="Smiley face" height="250" width="250"></div>
+  <center><button type="button" onclick="changeBGred()">Gotcha!</button></center>
+  
+  </div>
+  
+  <div class="item7" id="BL"><img src="https://github.com/agm86b/w8_mid-term/blob/master/image/006.png?raw=true" alt="Smiley face" height="250" width="250"></div>
 
 </div>
 
-<script
+<script>
   var name= "Pokémon";
   var lastname= "world";
   var fullname= name + lastname;
   fullname= name + " " + lastname;
   alert("Hello！Welcome to the "+fullname+" ⌒☆⌒(๑•̀ω•́๑)");
+  
+  function changeBGred()
+{
+var BGelement= document.getElementById("BG");
+BGelement.style.backgroundColor="red";
+clickedButton();
+}
+ 
+ function changeBGblue()
+{
+var BGelement= document.getElementById("BL");
+BGelement.style.backgroundColor="blue";
+clickedButton();
+}
+  
 </script>
 
 
       </body>
 
 </html>
-
