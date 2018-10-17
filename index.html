@@ -30,37 +30,48 @@
 
 <div class="grid-container">
   
-  <div class="item2" id="BG">
+  <div class="item1" id="B1">
   
   <img src="https://github.com/agm86b/w8_mid-term/blob/master/image/001.png?raw=true" alt="Smiley face" height="250" width="250">
-  <center><button type="button" onclick="changeBGred()">Gotcha!</button></center>
+  <center><button type="button" onclick="changeB1red()">Gotcha!</button></center>
   
   </div>
   
-  <div class="item3" id="BL">
+  <div class="item2" id="B2">
   <img src="https://github.com/agm86b/w8_mid-term/blob/master/image/003.png?raw=true" alt="Smiley face" height="250" width="250">
   
-  <center><button type="button" onclick="changeBGblue()">Gotcha!</button></center>
+  <center><button type="button" onclick="changeB2blue()">Gotcha!</button></center>
   
   </div>
 
-  <div class="item4" id="BG" >
+  <div class="item3" id="B3">
   
   <img src="https://github.com/agm86b/w8_mid-term/blob/master/image/005.png?raw=true" alt="Smiley face" height="250" width="250">
   
-  <center><button type="button" onclick="changeBGred()">Gotcha!</button></center>
+  <center><button type="button" onclick="changeB3red()">Gotcha!</button></center>
+  
+  
+ </div>
+  
+  <div class="item4" id="B4"><img src="https://github.com/agm86b/w8_mid-term/blob/master/image/004.png?raw=true" alt="Smiley face" height="250" width="250">
+  
+    <center><button type="button" onclick="changeB4blue()">Gotcha!</button></center>
   
   </div>
-  
-  <div class="item5" id="BL"><img src="https://github.com/agm86b/w8_mid-term/blob/master/image/004.png?raw=true" alt="Smiley face" height="250" width="250"></div>
      
-  <div class="item6" id="BG"><img src="https://github.com/agm86b/w8_mid-term/blob/master/image/002.png?raw=true" alt="Smiley face" height="250" width="250">
+  <div class="item5" id="B5"><img src="https://github.com/agm86b/w8_mid-term/blob/master/image/002.png?raw=true" alt="Smiley face" height="250" width="250">
   
-  <center><button type="button" onclick="changeBGred()">Gotcha!</button></center>
+  <center><button type="button" onclick="changeB5red()">Gotcha!</button></center>
   
   </div>
   
-  <div class="item7" id="BL"><img src="https://github.com/agm86b/w8_mid-term/blob/master/image/006.png?raw=true" alt="Smiley face" height="250" width="250"></div>
+  <div class="item6" id="B6">
+  
+  <img src="https://github.com/agm86b/w8_mid-term/blob/master/image/006.png?raw=true" alt="Smiley face" height="250" width="250">
+  
+  <center><button type="button" onclick="changeB6blue()">Gotcha!</button></center>
+  
+  </div>
 
 </div>
 
@@ -71,19 +82,47 @@
   fullname= name + " " + lastname;
   alert("Hello！Welcome to the "+fullname+" ⌒☆⌒(๑•̀ω•́๑)");
   
-  function changeBGred()
+  function changeB1red()
 {
-var BGelement= document.getElementById("BG");
+var BGelement= document.getElementById("B1");
 BGelement.style.backgroundColor="red";
 clickedButton();
 }
  
- function changeBGblue()
+ function changeB2blue()
 {
-var BGelement= document.getElementById("BL");
+var BGelement= document.getElementById("B2");
 BGelement.style.backgroundColor="blue";
 clickedButton();
 }
+  
+  function changeB3red()
+{
+var BGelement= document.getElementById("B3");
+BGelement.style.backgroundColor="red";
+clickedButton();
+}  
+
+function changeB4blue()
+{
+var BGelement= document.getElementById("B4");
+BGelement.style.backgroundColor="blue";
+clickedButton();
+}
+  
+  function changeB5red()
+{
+var BGelement= document.getElementById("B5");
+BGelement.style.backgroundColor="red";
+clickedButton();
+}  
+  
+function changeB6blue()
+{
+var BGelement= document.getElementById("B6");
+BGelement.style.backgroundColor="blue";
+clickedButton();
+}  
   
 </script>
 
