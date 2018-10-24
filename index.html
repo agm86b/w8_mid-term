@@ -1,154 +1,62 @@
+<!DOCTYPE html>
 <html>
-
   <head>
-
-     <title>Choose your Pokémon</title>
-
+    <meta charset="utf-8">
+    <title>Hello, WebVR! • A-Frame</title>
+    <meta name="description" content="Hello, WebVR! • A-Frame">
+    <script src="https://aframe.io/releases/0.8.2/aframe.min.js"></script>
   </head>
+  
+  <script>
+      
+    var numberOfClicks=0;
+         var currentAngle=0;
+        
+         function clickedObject(el)
+         {
+            numberOfClicks++;
+            console.log("Clicked an object: "+el.tagName+". # of clicks: "+numberOfClicks+".");       
+         }
 
-  <body> 
-  <style>
+  </script>
   
-  body {background-color: CDD269;} 
-  
-.grid-container {
-  display: grid;
-  grid-template-columns: auto auto auto ;
-  grid-gap: 5px;
-  background-color: 505400;
-  padding: 10px;
-}
-.grid-container>div {
-  background-color:#84A136;
-  text-align: center;
-  padding:30px 0;
-  }  
-  
-</style>
+  <body>
+    <a-scene background="color: #ECECEC">
+             <a-entity position="0 0 1">
+       	<a-camera wasd-controls look-controls>
+                 <a-cursor color="yellow"></a-cursor>
+       	</a-camera>
+       </a-entity>
+      
+      
+      <a-box onclick="clickedObject(this);" position="-1 0.5 -3" rotation="0 90 0" color="#4CC3D9" shadow>
+      
+      
+          <a-box position="0 0 0" rotation="0 45 0" color="#4CC3D9" shadow></a-box>
 
-     <div style="text-align:center"><h1>Choose your Pokémon</h1></DIV>
+      
+      </a-box>
+      
+      <a-sphere onclick="clickedObject(this);" position="0 1.25 -5" radius="1.25" color="#EF2D5E" shadow></a-sphere>
+      
+      <a-cylinder position="1 0.75 -3" radius="0.5" height="1.5" color="#FFC65D" shadow></a-cylinder>
+      <a-plane position="0 0 -4" rotation="-90 0 0" width="4" height="4" color="#7BC8A4" shadow></a-plane>
+      
+      <a-torus color="#43A367" arc="270" radius="5" radius-tubular="0.1" position="-1 1 -5" visible="false" ></a-torus>
+      
+      <a-text value="Click me!" scale="1.5 1.5 2" align="center" position= "1 -1 -2"    geometry="primitive:plane"></a-text>
 
-<div class="grid-container">
-  
-  <div class="item1" id="B1">
-  
-  <img id="img01" src="https://github.com/agm86b/w8_mid-term/blob/master/image/001.png?raw=true" alt="Smiley face" height="250" width="250">
-  <center><button type="button" onclick="changeB1red()">Gotcha!</button></center>
-  
-  </div>
-  
-  <div class="item2" id="B2">
-  <img id="img02" src="https://github.com/agm86b/w8_mid-term/blob/master/image/003.png?raw=true" alt="Smiley face" height="250" width="250">
-  
-  <center><button type="button" onclick="changeB2blue()">Gotcha!</button></center>
-  
-  </div>
+<a-text id="myText" 
+scale="2 2 2" 
+font="https://cdn.aframe.io/fonts/SourceCodePro.fnt" 
+align="center" 
+value="Hello!\n world" 
+position= "-3 1 -3" 
+rotation="0 80 0" color="blue">
 
-  <div class="item3" id="B3">
-  
-  <img id="img03" src="https://github.com/agm86b/w8_mid-term/blob/master/image/005.png?raw=true" alt="Smiley face" height="250" width="250">
-  
-  <center><button type="button" onclick="changeB3red()">Gotcha!</button></center>
-  
-  
- </div>
-  
-  <div class="item4" id="B4">
-  <img id="img04" src="https://github.com/agm86b/w8_mid-term/blob/master/image/006.png?raw=true" alt="Smiley face" height="250" width="250">
-  
-    <center><button type="button" onclick="changeB4blue()">Gotcha!</button></center>
-  
-  </div>
-     
-  <div class="item5" id="B5">
-  <img id="img05" src="https://github.com/agm86b/w8_mid-term/blob/master/image/007.png?raw=true" alt="Smiley face" height="250" width="250">
-  
-  <center><button type="button" onclick="changeB5red()">？？？</button></center>
-  
-  </div>
-  
-  <div class="item6" id="B6">
-  
-  <img id="img06" src="https://github.com/agm86b/w8_mid-term/blob/master/image/002.png?raw=true
-  " alt="Smiley face" height="250" width="250">
-  
-  <center><button type="button" onclick="changeB6blue()">Gotcha!</button></center>
-  
-  </div>
-
-</div>
-
-<script>
-  var name= "Pokémon";
-  var lastname= "world";
-  var fullname= name + lastname;
-  fullname= name + " " + lastname;
-  alert("Hello！Welcome to the "+fullname+" ⌒☆⌒(๑•̀ω•́๑)");
-  
-  function changeB1red()
-{
-var BGelement= document.getElementById("B1");
-BGelement.style.backgroundColor="red";
-var imgelement= document.getElementById("img01");
-imgelement.src=image1;
-clickedButton();
-}
- 
- function changeB2blue()
-{
-var BGelement= document.getElementById("B2");
-BGelement.style.backgroundColor="blue";
-var imgelement= document.getElementById("img02");
-imgelement.src=image1;
-clickedButton();
-}
-  
-  function changeB3red()
-{
-var BGelement= document.getElementById("B3");
-BGelement.style.backgroundColor="red";
-var imgelement= document.getElementById("img03");
-imgelement.src=image1;
-clickedButton();
-}  
-function changeB4blue()
-{
-var BGelement= document.getElementById("B4");
-BGelement.style.backgroundColor="blue";
-var imgelement= document.getElementById("img04");
-imgelement.src=image1;
-clickedButton();
-}
-  
-  function changeB5red()
-{
-var BGelement= document.getElementById("B5");
-BGelement.style.backgroundColor="red";
-var imgelement= document.getElementById("img05");
-imgelement.src=image2;
-alert("Oops！");
-clickedButton();
-}  
-  
-function changeB6blue()
-{
-var BGelement= document.getElementById("B6");
-BGelement.style.backgroundColor="blue";
-var imgelement= document.getElementById("img06");
-imgelement.src=image1;
-clickedButton();
-}  
-
-var image1="https://github.com/agm86b/w8_mid-term/blob/master/image/008.png?raw=true";
-
-var image2="https://github.com/agm86b/w8_mid-term/blob/master/image/004.png?raw=true";
+</a-text>
 
 
-
-  
-</script>
-
-
-      </body>
-
+    </a-scene>
+  </body>
 </html>
